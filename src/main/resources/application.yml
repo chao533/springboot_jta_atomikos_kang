@@ -4,7 +4,7 @@ server:
     uri-encoding: UTF-8
 spring:
   datasource:
-    # 主数据源
+    # 数据源1
     master:
       driveClassName: com.mysql.cj.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
@@ -19,7 +19,7 @@ spring:
       maintenanceInterval: 60
       maxIdleTime: 60
 
-    # 主数据源
+    # 数据源2
     slave:
       driveClassName: com.mysql.cj.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
@@ -34,7 +34,3 @@ spring:
       maintenanceInterval: 60
       maxIdleTime: 60
 
-  # 分布式锁
-  jta:
-    # log-dir: classpath*:tx-logs
-    transaction-manager-id: txManager
